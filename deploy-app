@@ -1,0 +1,19 @@
+name: Deploy App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Deploy Application
+        run: |
+          echo "Deploying the app..."
+          # Add the deployment commands here (e.g., kubectl, docker, etc.)
